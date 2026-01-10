@@ -1,0 +1,45 @@
+body{
+margin: 0; 
+display:flex; 
+justify-content: center; 
+align-items: center; 
+height:100vh; 
+}
+
+hr{
+    border: none; 
+    height: 2px; 
+    background: rgb(185, 189, 189); 
+    width: 80%; 
+    margin: 20px auto; 
+}
+.box{
+    width:600px;
+    height:630px;
+    border:1px solid black;
+    padding: 30px 50px 30px 20px; 
+
+}
+
+#Topic{
+ text-align: center; 
+}
+
+#mission, #rules{
+    margin-left: 70px;
+}
+
+#statement{
+    margin-left: 60px;
+}
+
+li{
+    margin-bottom:20px;
+    line-height:1.5 ;
+}
+img{
+    
+    width: 200px;;
+    display: block;      /* makes margin auto work */
+    margin: 50px auto 0; /* top 100px, horizontal auto, bottom 0 */
+}
