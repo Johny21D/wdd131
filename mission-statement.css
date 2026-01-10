@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Konkhmer+Sleokchher&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Slab:wght@100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
 body{
 margin: 0; 
 display:flex; 
@@ -19,10 +22,16 @@ hr{
     border:1px solid black;
     padding: 30px 50px 30px 20px; 
 
+
 }
 
 #Topic{
  text-align: center; 
+}
+
+#Topic h3{
+    color:rgb(67, 195, 235);
+    font-family: 'Merriweather', serif;
 }
 
 #mission, #rules{
