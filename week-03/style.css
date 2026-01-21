@@ -1,7 +1,6 @@
-/* Google Fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Base styles - Mobile first */
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -62,18 +61,18 @@ nav a:hover {
 }
 
 footer {
-  text-align: right;
+  text-align: left;
   margin-top: 1rem;
 }
 
 /* Tablet & Desktop Styles */
 @media screen and (min-width: 700px) {
   nav a {
-    display: inline-block; /* Show links */
+    display: inline-block; /
   }
 
   .menu-btn {
-    display: none; /* Hide hamburger */
+    display: none; 
   }
 
   main {
@@ -83,7 +82,7 @@ footer {
   }
 
   section {
-    flex: 1 1 48%; /* 2 sections per row */
+    flex: 1 1 48%; 
     margin: 1%;
   }
 
@@ -94,7 +93,7 @@ footer {
 
 @media screen and (min-width: 1000px) {
   section {
-    flex: 1 1 30%; /* 3 sections per row */
+    flex: 1 1 30%; 
   }
 
   h1 {
