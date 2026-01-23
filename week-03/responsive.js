@@ -1,12 +1,6 @@
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelectorAll('nav a');
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
 
-menuBtn.addEventListener('click', () => {
-  navLinks.forEach(link => {
-    if (link.style.display === 'block') {
-      link.style.display = 'none';
-    } else {
-      link.style.display = 'block';
-    }
-  });
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("open");
 });
