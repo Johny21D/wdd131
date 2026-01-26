@@ -13,6 +13,8 @@ header, main, footer {
   background-color: lightblue;
 }
 
+
+
 h1 {
   text-align: center;
 }
@@ -26,7 +28,8 @@ section {
 
 nav {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  gap:15px;
 }
 
 nav a {
@@ -65,8 +68,7 @@ nav.open a {
 footer {
   text-align: center;
 }
-
-/* Desktop styles */
+/*Tablet*/
 @media screen and (min-width: 700px) {
   .menu-btn {
     display: none;
@@ -74,10 +76,27 @@ footer {
 
   nav {
     flex-direction: row;
-    justify-content: space-around;
   }
 
   nav a {
     display: block;
+  }
+
+  main{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+
+  gap:1rem;
+}
+}
+/*Desktop*/
+@media screen and (min-width: 1000px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  main section:first-child {
+    grid-column: auto; 
   }
 }
