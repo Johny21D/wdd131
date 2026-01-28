@@ -28,8 +28,9 @@ section {
 
 nav {
   display: flex;
-  justify-content: flex-end;
-  gap:15px;
+  flex-direction: column; 
+  align-items: center;
+  gap:10px;
 }
 
 nav a {
@@ -42,6 +43,19 @@ nav a {
 
 nav a:hover {
   color: #616061;
+}
+
+nav hr{
+    display:none;
+    border: none; 
+    height: 0.5px; 
+    background: rgb(0, 0, 0); 
+    width: 96%; 
+    margin: 10px auto; 
+}
+
+nav.open hr {
+    display: block;
 }
 
 .menu-btn {
@@ -58,7 +72,8 @@ nav a:hover {
   height: 4px;
   background-color: black;
   margin: 2px 0;
-  transition: 0.3s;
+  transition: 0.9s;
+  transform-origin: center;
 }
 
 nav.open a {
@@ -102,12 +117,16 @@ footer {
 }
 
 
-.open .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
+.menu-btn.open .bar1 {
+  transform: rotate(45deg) translate(6px, 6px);
 }
-.open .bar2 {opacity: 0;}
 
-.open .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
+.menu-btn.open .bar2 {
+  opacity: 0;
 }
+
+.menu-btn.open .bar3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
           
