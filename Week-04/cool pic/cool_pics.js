@@ -1,16 +1,20 @@
+const btn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
 
 const gallery = document.querySelector('.gallery');
 const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
 
-// Event listener for opening the modal
+btn.onclick = () => {
+  nav.classList.toggle("open");
+};
+
 gallery.addEventListener('click', openModal);
 
 function openModal(e) {
-  // Code to show modal - Use event parameter 'e'
   if (e.target.tagName === "IMG") {
-    modalImage.src = e.target.src.replace('-sm', '-full');
+    modalImage.src = e.target.src;
     modal.showModal();
   }
 }
@@ -26,4 +30,3 @@ modal.addEventListener('click', (event) => {
     modal.close();
   }
 });
-          
