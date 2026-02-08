@@ -1,12 +1,10 @@
-* {
-    box-sizing: border-box; /* This ensures padding doesn't increase width */
-}
+
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0 auto;
-    padding: 0; /* Remove this so the yellow lines touch the edges */
-    overflow-x: hidden; /* This kills any accidental horizontal scroll bars */
+    margin: 0;
+    padding: 0; 
+    overflow-x: hidden; 
 }
 
 h1 {
@@ -20,13 +18,14 @@ hr {
     margin: 10px 0;
 }
 
+/* --- NAVIGATION --- */
 .main-nav {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end; /* Pinned to the RIGHT on mobile */
     list-style: none;
     gap: 20px;
-    padding: 0 20px; /* Use padding here to create the gap from the edge */
-    padding-right: 50px; /* Remove the margin-right! */
+    padding: 10px 20px; /* Space from the right edge */
+    margin: 0; 
 }
 
 .main-nav a {
@@ -35,25 +34,25 @@ hr {
     font-weight: bold;
 }
 
-/* Stars Styling */
+/* --- STARS & TITLES --- */
 .stars {
     color: #ffe100;    
-    font-size: 32px;   /* Increased size further */
+    font-size: 32px;
     font-weight: bold; 
     margin-top: 10px;  
 }
 
 .book-title {
     color: #b03030;
-    clear: both;       /* Forces title BELOW the floated image */
-    padding-top: 15px; /* Adds space between image and title */
+    clear: both;
+    padding-top: 15px;
 }
 
 footer {
     text-align: center;
     border-top: 3px solid #ffe100;
     margin-top: 40px;
-    padding-top: 10px;
+    padding: 20px 0;
     width: 100%;
 }
 
@@ -66,27 +65,33 @@ footer {
 .meta-info {
     text-align: right; 
     margin-bottom: 20px;
+    padding: 0 20px;
 }
 
-/* Update this in your MOBILE section */
 .book-content img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 20px auto; /* Centering it properly for mobile */
+    margin: 0 auto 20px auto; 
 }
 
 .mobile-only {
     display: block; 
-    margin: 50px 0; 
+    margin: 55px 0; 
     border: 0;
     border-top: 3px solid #ffe100;
-}
+    }   
+
 /* --- 3. LARGER DEVICE LAYOUT (Tablet/Desktop) --- */
 @media (min-width: 768px) {
-
+    
     .mobile-only {
         display: none; 
+    }
+
+    .main-nav {
+        justify-content: flex-end; /* Stays on the RIGHT for desktop */
+        padding-right: 40px;
     }
 
     .post-wrapper {
@@ -103,21 +108,15 @@ footer {
         text-align: right;
     }
 
-.book-content img {
-    /* Increase this number to make the whole image bigger */
-    max-width: 350px; 
-    width: 500%;      /* Ensures it fills the max-width space */
-    
-    /* If you want a specific height, add this (but be careful of distortion) */
-    height: auto;     /* 'auto' keeps the ratio perfect */
-    
-    float: none;
-    display: block;
-    margin: 0 0 20px 200px; /* Your manual left adjustment */
-}
+    .book-content img {
+        max-width: 350px; 
+        width: 100%;      
+        height: auto;     
+        display: block;
+        margin: 0 0 20px 200px; 
+    }
 
     .book-title {
-        color: #b03030;
         text-align: left;      
         margin-top: 20px;
     }
