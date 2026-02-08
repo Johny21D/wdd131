@@ -1,31 +1,37 @@
-
+* {
+    box-sizing: border-box; 
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0; 
     overflow-x: hidden; 
+    width: 100%;
 }
 
 h1 {
     text-align: center;
     font-family: serif;
+    width: 100%;
+    padding: 0 10px;
 }
 
 hr {
     border: 0;
     border-top: 3px solid #ffe100;
     margin: 10px 0;
+    width: 100%; 
 }
 
-/* --- NAVIGATION --- */
 .main-nav {
     display: flex;
-    justify-content: flex-end; /* Pinned to the RIGHT on mobile */
+    justify-content: flex-end; 
     list-style: none;
     gap: 20px;
-    padding: 10px 20px; /* Space from the right edge */
+    padding: 10px 20px; 
     margin: 0; 
+    width: 100%; 
 }
 
 .main-nav a {
@@ -34,7 +40,6 @@ hr {
     font-weight: bold;
 }
 
-/* --- STARS & TITLES --- */
 .stars {
     color: #ffe100;    
     font-size: 32px;
@@ -56,10 +61,10 @@ footer {
     width: 100%;
 }
 
-/* --- 2. MOBILE LAYOUT (Default) --- */
 .post-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .meta-info {
@@ -80,18 +85,13 @@ footer {
     margin: 55px 0; 
     border: 0;
     border-top: 3px solid #ffe100;
-    }   
+    width: 100%;
+}   
 
-/* --- 3. LARGER DEVICE LAYOUT (Tablet/Desktop) --- */
 @media (min-width: 768px) {
     
     .mobile-only {
         display: none; 
-    }
-
-    .main-nav {
-        justify-content: flex-end; /* Stays on the RIGHT for desktop */
-        padding-right: 40px;
     }
 
     .post-wrapper {
@@ -99,6 +99,8 @@ footer {
         grid-template-columns: 1fr 3fr;
         gap: 40px;
         margin-top: 40px;
+        padding: 0 40px;
+        width: 100%;
     }
 
     .meta-info {
@@ -113,7 +115,7 @@ footer {
         width: 100%;      
         height: auto;     
         display: block;
-        margin: 0 0 20px 200px; 
+        margin: 0 auto 20px auto; 
     }
 
     .book-title {
