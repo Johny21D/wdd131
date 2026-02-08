@@ -1,7 +1,6 @@
-
 body {
     font-family: Arial, sans-serif;
-    max-width: 0 auto;
+    max-width: auto; /* Fixed: was 0 auto */
     margin: 0 auto;
     padding: 20px;
 }
@@ -32,15 +31,18 @@ hr {
     font-weight: bold;
 }
 
-.stars{
-    color: #ffe100;    /* This makes them gold/yellow */
-    font-size: 24px;   /* This increases their size */
-    font-weight: bold; /* Optional: makes them look thicker */
-    margin-top: 10px;  /* Adds a little space above the stars */
+/* Stars Styling */
+.stars {
+    color: #ffe100;    
+    font-size: 32px;   /* Increased size further */
+    font-weight: bold; 
+    margin-top: 10px;  
 }
 
 .book-title {
     color: #b03030;
+    clear: both;       /* Forces title BELOW the floated image */
+    padding-top: 15px; /* Adds space between image and title */
 }
 
 footer {
@@ -58,7 +60,7 @@ footer {
 }
 
 .meta-info {
-    text-align: right; /* Right-aligned as seen in your mobile screenshot */
+    text-align: right; 
     margin-bottom: 20px;
 }
 
@@ -66,21 +68,20 @@ footer {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 15px 0; /* Keeps image left-aligned on mobile */
+    margin: 0 auto 105px 0; 
 }
 
 .mobile-only {
-    display: block; /* Show the line on small screens */
+    display: block; 
     margin: 50px 0; 
     border: 0;
     border-top: 3px solid #ffe100;
 }
-
 /* --- 3. LARGER DEVICE LAYOUT (Tablet/Desktop) --- */
 @media (min-width: 768px) {
 
     .mobile-only {
-        display: none; /* Hide the line when the screen is wide */
+        display: none; 
     }
 
     .post-wrapper {
@@ -91,19 +92,22 @@ footer {
     }
 
     .meta-info {
-        border-right: 1px solid #ffd8b1; /* The vertical line divider */
+        border-right: 1px solid #ffd8b1; 
         padding-right: 30px;
         margin-bottom: 0;
         text-align: right;
     }
 
-    .book-content {
-        padding-left: 10px;
-    }
-
     .book-content img {
         max-width: 250px;
-        float: left; /* Allows the description text to wrap around the cover */
-        margin-right: 20px;
+        float: none;           /* Ensures title stays below image */
+        display: block;        /* Takes up the whole line */
+        margin: 0 0 20px 200px    /* Changed from 'auto' to '0' to align left */
+    }
+
+    .book-title {
+        color: #b03030;
+        text-align: left;      
+        margin-top: 20px;
     }
 }
