@@ -1,8 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: auto; /* Fixed: was 0 auto */
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0; /* Remove default browser margins */
+    padding: 0; /* Remove the padding that blocks the lines */
 }
 
 h1 {
@@ -23,6 +22,7 @@ hr {
     list-style: none;
     gap: 20px;
     padding: 0;
+    margin-right: 40px;
 }
 
 .main-nav a {
