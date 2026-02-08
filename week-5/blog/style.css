@@ -1,0 +1,109 @@
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 0 auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+}
+
+hr {
+    border: 0;
+    border-top: 3px solid #ffe100;
+    margin: 10px 0;
+}
+
+/* Navigation Links */
+.main-nav {
+    display: flex;
+    justify-content: flex-end; 
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #b03030;
+    font-weight: bold;
+}
+
+.stars{
+    color: #ffe100;    /* This makes them gold/yellow */
+    font-size: 24px;   /* This increases their size */
+    font-weight: bold; /* Optional: makes them look thicker */
+    margin-top: 10px;  /* Adds a little space above the stars */
+}
+
+.book-title {
+    color: #b03030;
+}
+
+footer {
+    text-align: center;
+    border-top: 3px solid #ffe100;
+    margin-top: 40px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+/* --- 2. MOBILE LAYOUT (Default) --- */
+.post-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-info {
+    text-align: right; /* Right-aligned as seen in your mobile screenshot */
+    margin-bottom: 20px;
+}
+
+.book-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px 0; /* Keeps image left-aligned on mobile */
+}
+
+.mobile-only {
+    display: block; /* Show the line on small screens */
+    margin: 50px 0; 
+    border: 0;
+    border-top: 3px solid #ffe100;
+}
+
+/* --- 3. LARGER DEVICE LAYOUT (Tablet/Desktop) --- */
+@media (min-width: 768px) {
+
+    .mobile-only {
+        display: none; /* Hide the line when the screen is wide */
+    }
+
+    .post-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .meta-info {
+        border-right: 1px solid #ffd8b1; /* The vertical line divider */
+        padding-right: 30px;
+        margin-bottom: 0;
+        text-align: right;
+    }
+
+    .book-content {
+        padding-left: 10px;
+    }
+
+    .book-content img {
+        max-width: 250px;
+        float: left; /* Allows the description text to wrap around the cover */
+        margin-right: 20px;
+    }
+}
