@@ -1,7 +1,12 @@
+* {
+    box-sizing: border-box; /* This ensures padding doesn't increase width */
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* Remove default browser margins */
-    padding: 0; /* Remove the padding that blocks the lines */
+    margin: 0 auto;
+    padding: 0; /* Remove this so the yellow lines touch the edges */
+    overflow-x: hidden; /* This kills any accidental horizontal scroll bars */
 }
 
 h1 {
@@ -15,14 +20,13 @@ hr {
     margin: 10px 0;
 }
 
-/* Navigation Links */
 .main-nav {
     display: flex;
     justify-content: flex-end; 
     list-style: none;
     gap: 20px;
-    padding: 0;
-    margin-right: 40px;
+    padding: 0 20px; /* Use padding here to create the gap from the edge */
+    padding-right: 50px; /* Remove the margin-right! */
 }
 
 .main-nav a {
@@ -64,11 +68,12 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Update this in your MOBILE section */
 .book-content img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 105px 0; 
+    margin: 0 auto 20px auto; /* Centering it properly for mobile */
 }
 
 .mobile-only {
@@ -92,18 +97,24 @@ footer {
     }
 
     .meta-info {
-        border-right: 1px solid #ffd8b1; 
+        border-right: 3px solid #ffe100; 
         padding-right: 30px;
         margin-bottom: 0;
         text-align: right;
     }
 
-    .book-content img {
-        max-width: 250px;
-        float: none;           /* Ensures title stays below image */
-        display: block;        /* Takes up the whole line */
-        margin: 0 0 20px 200px    /* Changed from 'auto' to '0' to align left */
-    }
+.book-content img {
+    /* Increase this number to make the whole image bigger */
+    max-width: 350px; 
+    width: 500%;      /* Ensures it fills the max-width space */
+    
+    /* If you want a specific height, add this (but be careful of distortion) */
+    height: auto;     /* 'auto' keeps the ratio perfect */
+    
+    float: none;
+    display: block;
+    margin: 0 0 20px 200px; /* Your manual left adjustment */
+}
 
     .book-title {
         color: #b03030;
