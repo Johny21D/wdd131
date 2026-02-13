@@ -46,6 +46,7 @@ const movieList = document.getElementById("movie-list");
 
 articles.forEach((movie) => {
   const article = document.createElement("article");
+  const starCount = movie.stars.length;
   article.classList.add("movie");
 
   article.innerHTML = `
@@ -54,7 +55,7 @@ articles.forEach((movie) => {
     <p><strong>Release Date:</strong> ${movie.date}</p>
     <p><strong>Recommended Age:</strong> ${movie.ages}</p>
     <p><strong>Genre:</strong> ${movie.genre}</p>
-    <p><strong>Rating:</strong> "${movie.stars}" out of 5</p>
+    <p><strong>Rating:</strong> "${movie.stars} (${starCount} out of 5)"</p>
   `;
 
   movieList.appendChild(article);
