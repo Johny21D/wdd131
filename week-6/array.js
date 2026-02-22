@@ -27,6 +27,7 @@ const pointsArray = myGrades.map(convert);
 
 console.log(pointsArray); 
           
+
 const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
     words.forEach(myfunction);
     function myfunction(items){
