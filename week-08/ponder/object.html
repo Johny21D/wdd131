@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="object.css">
+    <script src="object.js" defer></script>
+</head>
+<body>
+
+<div id="addSectionArea">
+    <label for="newSectionNum">Section:</label>
+    <input id="newSectionNum" type="number" required/>
+
+    <label for="newCourse">Course:</label>
+    <input id="newCourse" type="text" required/>
+
+    <label for="newRoom">Room:</label>
+    <input id="newRoom" type="text" required/>
+
+    <label for="newDays">Days:</label>
+    <input id="newDays" type="text" required/>
+
+    <label for="newTime">Time:</label>
+    <input id="newTime" type="text" required/>
+
+    <label for="newInstructor">Instructor:</label>
+    <input id="newInstructor" type="text" required/>
+    
+    <button id="addSection">Add New Section</button>
+</div>
+
+<div class="enrollment-controls">
+    <label for="sectionNumber">Section Number</label>
+    <input id="sectionNumber" type="number" />
+    <button id="enrollStudent">Enroll Student</button> 
+</div>
+
+<table>
+<thead>
+  <tr>
+    <th>Course</th>
+    <th>Section</th>
+    <th>Room</th>
+    <th>Enrolled</th>
+    <th>Days</th>
+    <th>Time</th>
+    <th>Instructor</th>
+    <th>Actions</th> </tr>
+</thead>
+  <tbody id="sections"></tbody>
+</table>
+          
+</body>
+</html>
