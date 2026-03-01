@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="charecter-card.js" defer></script>
 </head>
 <body>
     <div class="charecter-card">
         <section class="image">
-        <img src="Attack on Titan.png" alt="Titan">
+            <img src="Attack on Titan.png" alt="Titan">
         </section>
 
         <section class="name">
-        <h3 >Attack on Titan</h3>
-        <h5 >Eren Yaeger</h4>
+            <h3>Attack on Titan</h3>
+            <h5>Eren Yaeger</h5>
         </section>
 
         <section id="stats">
-            <p>Class:Max</p>
-            <p>Level:Max</p>
-            <p>Level:Max</p>
+            <p>Class: Max</p>
+            <p id="level">Level: 1</p>
+            <p id="health">Health: 1000/1000</p>
         </section>
 
-        <button >Attack</button>
-        <button >Level Up</button>
-
-
+        <div class="button-group">
+            <button id="button1">Attack</button>
+            <button id="button2">Level Up</button>
+        </div>
     </div>
 </body>
 </html>
