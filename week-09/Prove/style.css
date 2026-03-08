@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#000000;
+}
+
+/* HEADER */
+
+header{
+    padding:20px;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    width:40px;
+}
+
+h1{
+    font-family:'Amatic SC', cursive;
+    font-size:40px;
+}
+
+/* SEARCH */
+
+.search-area{
+    margin-top:10px;
+    display:flex;
+}
+
+.search-area input{
+    flex:1;
+    padding:10px;
+    border:2px solid #000000;
+    border-right:none;
+    border-radius:6px 0 0 6px;
+}
+
+.search-area button{
+    width:40px;
+    border:2px solid #000000;
+    background:white;
+    border-radius:0 6px 6px 0;
+}
+.search-area img{
+    width:18px;
+
+}
+
+/* MAIN */
+
+main{
+    padding:20px;
+}
+
+.recipe-card{
+    height:300px;
+    border:2px solid #000000;
+    border-radius:6px;
+    background:white;
+    overflow:hidden;
+}
+
+.recipe-img{
+    width:100%;
+    display:block;
+}
+
+.recipe-content{
+    padding:15px;
+}
+
+.recipe-content h2{
+    font-family:'Amatic SC', cursive;
+    font-size:32px;
+    color:#2c7be5;
+}
+
+.rating{
+    display:block;
+    margin:8px 0;
+}
+
+.description{
+    font-size:14px;
+    display:none;
+}
+
+.icon-star-empty{
+    font-size: 25px;
+    position: relative;
+    top: 3px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:20px;
+}
+
+.footer-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.social{
+    display:flex;
+    gap:10px;
+}
+
+.social img{
+    width:25px;
+}
+
+/* DESKTOP / LARGER DEVICES */
+
+@media (min-width:700px){
+
+    header{
+        max-width:900px;
+        margin:auto;
+    }
+
+    main{
+        max-width:900px;
+        margin:auto;
+    }
+
+    .recipe-card{
+        display:flex;
+        align-items:center;
+        gap:20px;
+        padding:15px;
+    }
+
+    .recipe-img{
+        width:320px;
+        border-radius:6px;
+    }
+
+    .recipe-content{
+        padding:0;
+    }
+
+    .description{
+        display:block;
+        margin-top:8px;
+        max-width:350px;
+    }
+
+    footer{
+        max-width:900px;
+        margin:auto;
+    }
+
+    .footer-content{
+        flex-direction:row;
+        justify-content:space-between;
+    }
+}
