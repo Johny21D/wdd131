@@ -14,21 +14,25 @@ body{
 
 header{
     padding:20px;
+    
 }
 
 .logo-area{
-    display:flex;
-    align-items:center;
-    gap:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 
 .logo{
-    width:40px;
+    width:100px;
 }
 
 h1{
     font-family:'Amatic SC', cursive;
-    font-size:40px;
+    position: relative;
+    top:15px;
+    font-size:60px;
 }
 
 /* SEARCH */
