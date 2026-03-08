@@ -52,9 +52,9 @@ h1{
     background:white;
     border-radius:0 6px 6px 0;
 }
+
 .search-area img{
     width:18px;
-
 }
 
 /* MAIN */
@@ -64,7 +64,6 @@ main{
 }
 
 .recipe-card{
-
     border:2px solid #000000;
     border-radius:6px;
     background:white;
@@ -86,20 +85,35 @@ main{
     color:#2c7be5;
 }
 
+/* Dessert Tag */
+
+.tag{
+    display:inline-block;
+    background:#eeeeee;
+    border:1px solid #999999;
+    padding:4px 8px;
+    font-size:12px;
+    border-radius:4px;
+}
+
+/* Rating */
+
 .rating{
     display:block;
     margin:8px 0;
 }
 
+.icon-star-empty{
+    font-size:25px;
+    position:relative;
+    top:3px;
+}
+
+/* Description */
+
 .description{
     font-size:14px;
     display:none;
-}
-
-.icon-star-empty{
-    font-size: 25px;
-    position: relative;
-    top: 3px;
 }
 
 /* FOOTER */
@@ -124,7 +138,7 @@ footer{
     width:25px;
 }
 
-/* DESKTOP / LARGER DEVICES */
+/* DESKTOP */
 
 @media (min-width:700px){
 
@@ -159,6 +173,9 @@ footer{
         margin-top:8px;
         max-width:350px;
     }
+    .tag{
+        position: relative;
+        top: -45px;}
 
     footer{
         max-width:900px;
