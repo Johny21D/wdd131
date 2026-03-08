@@ -44,6 +44,7 @@ h1{
 
 .search-area input{
     flex:1;
+    width:30px;
     padding:10px;
     border:2px solid #000000;
     border-right:none;
@@ -51,7 +52,7 @@ h1{
 }
 
 .search-area button{
-    width:40px;
+    width:30px;
     border:2px solid #000000;
     background:white;
     border-radius:0 6px 6px 0;
