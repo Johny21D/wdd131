@@ -93,4 +93,4 @@ document.querySelector("#search").addEventListener("keypress", (e) => {
 });
 
 
-renderHikes(hikes);
+renderHikes(hikes[0]);
