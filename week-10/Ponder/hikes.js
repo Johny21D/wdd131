@@ -1,7 +1,7 @@
 const hikes = [
   {
     name: "Bechler Falls",
-    imgSrc: "https://i0.wp.com/thebigoutside.com/wp-content/uploads/2020/08/Iris-Falls-on-the-Bechler-River-Yellowstone-National-Park.jpg",
+    imgSrc: "https://byui-cit.github.io/wdd131/projects/images/bechler-falls.jpg",
     imgAlt: "Image of Bechler Falls",
     distance: "3 miles",
     tags: ["Caves", "Yellowstone", "Waterfall"],
