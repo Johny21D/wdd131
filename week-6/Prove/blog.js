@@ -45,22 +45,25 @@ const articles = [
 
 ];
 
-// create and insert articles into the page
-const movieList = document.getElementById("movie-list");
+const movieList = document.querySelector("#movie-list");
 
 articles.forEach(movie => {
     const article = document.createElement("article");
-    article.classList.add("movie");
+    article.classList.add("book-review");
 
-    const starCount = movie.stars.length;
     article.innerHTML = `
-        <h2>${movie.title}</h2>
-        <img src="${movie.imgSrc}" alt="${movie.imgAlt}">
-        <p><strong>Release Date:</strong> ${movie.date}</p>
-        <p><strong>Recommended Age:</strong> ${movie.ages}</p>
-        <p><strong>Genre:</strong> ${movie.genre}</p>
-        <p><strong>Rating:</strong> ${movie.stars} (${starCount} out of 5)</p>
-		<p>${movie.description}</p>
+        <aside class="meta">
+            <p>${movie.date}</p>
+            <p>${movie.ages}</p>
+            <p>${movie.genre}</p>
+            <p>${movie.stars}</p>
+        </aside>
+        <div class="divider"></div>
+        <section class="content">
+            <h2>${movie.title}</h2>
+            <img src="${movie.imgSrc}" alt="${movie.imgAlt}">
+            <p>${movie.description}</p>
+        </section>
     `;
 
     movieList.appendChild(article);
